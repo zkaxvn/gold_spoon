@@ -251,3 +251,12 @@ class _PartyScreenState extends State<PartyScreen> {
     );
   }
 }
+
+class _Photo extends StatelessWidget {
+  const _Photo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
