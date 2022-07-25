@@ -92,6 +92,7 @@ class _PartyScreenState extends State<PartyScreen> {
                 child: Text('mypage'),
               ),
             ),
+            SizedBox(height: 8.0),
             Container(
               child: TextButton(
                 style: TextButton.styleFrom(
@@ -137,95 +138,19 @@ class _PartyScreenState extends State<PartyScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 8.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'asset/img/images.jpeg',
-                          width: 120,
-                          height: 120,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 3.0),
-                        child: Text(
-                          '2:2 보실분!',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      ),
-                      Text(
-                        '주말에 볼 사람',
-                      ),
-                    ],
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        'asset/img/images-2.jpeg',
-                        width: 120,
-                        height: 120,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3.0),
-                      child: Text(
-                        '오늘 2:2 여의도',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 15.0,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      '2:2',
-                    ),
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        'asset/img/images-3.jpeg',
-                        width: 120,
-                        height: 120,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3.0),
-                      child: Text(
-                        '거북이',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 15.0,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      '이상형찾기',
-                    ),
-                  ],
-                ),
+                _Photo(),
+                _Photo(),
+                _Photo(),
               ],
             ),
           ],
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         //type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
@@ -257,6 +182,31 @@ class _Photo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8.0),
+          child: Image.asset(
+            'asset/img/images.jpeg',
+            width: 120,
+            height: 120,
+          ),
+        ),
+        Text(
+          '2:2 보실분!',
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 15.0,
+          ),
+        ),
+        Text(
+          '주말에 볼 사람',
+        ),
+      ],
+    );
   }
 }
+
+
+
