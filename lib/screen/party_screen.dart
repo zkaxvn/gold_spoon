@@ -208,5 +208,14 @@ class _Photo extends StatelessWidget {
   }
 }
 
+class _PersonList extends StatelessWidget {
+  const _PersonList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 
 
